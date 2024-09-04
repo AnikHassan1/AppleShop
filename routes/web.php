@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\brandController;
 use App\Http\Controllers\categoryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PolicieController;
 use App\Http\Controllers\ProductController;
@@ -11,8 +12,13 @@ use App\Http\Middleware\userAuthentificationMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Pages.homePage');
 });
+// users
+Route::get('/homepage',[HomeController::class,'Homepage']);
+
+
+// users
 Route::get('/users',[userController::class,'users']);
 // Brands
 Route::get('/BrandList',[brandController::class,'BrandList']);

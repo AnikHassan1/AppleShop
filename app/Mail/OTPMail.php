@@ -38,7 +38,7 @@ class OTPMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'name',
+            view: 'Email.mail',
         );
     }
 
